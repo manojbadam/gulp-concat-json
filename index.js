@@ -26,7 +26,7 @@ module.exports = function (fileName) {
       return this.emit('error', new PluginError('gulp-concat-json', 'Streaming not supported'));
     }
 
-    data.push(JSON.parse(file.contents.toString()));
+    data.push(JSON.parse(file.contents.toString())[0]);
   }
 
   function endStream() {
